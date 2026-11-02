@@ -1,0 +1,41 @@
+{
+  "commit": "94621aba9f3ff9c32cb721eac0380c30dbb153fe",
+  "files": [
+    {
+      "name": "sepl_12.se1",
+      "bytes": 483743,
+      "sha256": "8dccace2557601a223d5f8a7cf64de4e6bbb8a82b9b130b95a54d49adfbe546d",
+      "source": "https://raw.githubusercontent.com/aloistr/swisseph/94621aba9f3ff9c32cb721eac0380c30dbb153fe/ephe/sepl_12.se1"
+    },
+    {
+      "name": "semo_12.se1",
+      "bytes": 1305932,
+      "sha256": "1c65fdbb854f350d3de36afc3e4ac126a53f360ae4f6dcb57beed7c690e7eb61",
+      "source": "https://raw.githubusercontent.com/aloistr/swisseph/94621aba9f3ff9c32cb721eac0380c30dbb153fe/ephe/semo_12.se1"
+    },
+    {
+      "name": "seas_12.se1",
+      "bytes": 223396,
+      "sha256": "3345555097e2080f4e2582026a6008ebbccfdca27600ba48019ca9c6e3e7a211",
+      "source": "https://raw.githubusercontent.com/aloistr/swisseph/94621aba9f3ff9c32cb721eac0380c30dbb153fe/ephe/seas_12.se1"
+    },
+    {
+      "name": "sepl_24.se1",
+      "bytes": 483414,
+      "sha256": "dea65ffc3ee39125eb1427ecfd578a208be2dd021f49fdfd4b8a130ccd5244f0",
+      "source": "https://raw.githubusercontent.com/aloistr/swisseph/94621aba9f3ff9c32cb721eac0380c30dbb153fe/ephe/sepl_24.se1"
+    },
+    {
+      "name": "semo_24.se1",
+      "bytes": 1308128,
+      "sha256": "62260992014e61d655c13733bb2d415ac23e8013d8ecf1d7714c237ea8f5b250",
+      "source": "https://raw.githubusercontent.com/aloistr/swisseph/94621aba9f3ff9c32cb721eac0380c30dbb153fe/ephe/semo_24.se1"
+    },
+    {
+      "name": "seas_24.se1",
+      "bytes": 222674,
+      "sha256": "1b4160a4d289c3d2df55efcc016d407a1516c079b725b2bf2b073a70211aa391",
+      "source": "https://raw.githubusercontent.com/aloistr/swisseph/94621aba9f3ff9c32cb721eac0380c30dbb153fe/ephe/seas_24.se1"
+    }
+  ]
+}

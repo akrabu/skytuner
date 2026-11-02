@@ -1,0 +1,36 @@
+{
+  "name": "skytuner",
+  "version": "0.0.2",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "node scripts/check-version.mjs && node scripts/prepare-vendor.mjs && tsc --noEmit && vite build && node scripts/source.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "check": "tsc --noEmit",
+    "verify:native": "node --experimental-strip-types scripts/verify-native.mjs",
+    "release": "node scripts/release.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.2.0",
+    "@fontsource-variable/space-grotesk": "^5.2.0",
+    "@fontsource/noto-sans-symbols-2": "^5.2.0",
+    "@js-temporal/polyfill": "0.5.1",
+    "swisseph-wasm": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0"
+  },
+  "author": {
+    "name": "Mark Steven Smith, Jr.",
+    "url": "https://www.markstevensmithjr.com"
+  },
+  "homepage": "https://skytuner.akrabu.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akrabu/skytuner.git"
+  }
+}

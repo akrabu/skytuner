@@ -1,0 +1,17 @@
+import {mkdir,readdir,readFile,cp,copyFile,stat} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import path from 'node:path';
+const root=process.cwd();
+const staging=path.join(root,'node_modules/.cache/skytuner-source');
+await mkdir(staging,{recursive:true});
+const {rm}=await import('node:fs/promises');
+await rm(staging,{recursive:true,force:true});await mkdir(staging,{recursive:true});
+for(const name of ['src','scripts','tests','public','docs','.github','index.html','package.json','package-lock.json','tsconfig.json','vite.config.ts','README.md','AGENTS.md','CHANGELOG.md','COPYRIGHT','LICENSE','THIRD-PARTY-NOTICES.md','.gitignore']) await cp(path.join(root,name),path.join(staging,name),{recursive:true});
+const metadata=JSON.parse(await readFile(path.join(root,'package.json'),'utf8'));
+const {writeFile}=await import('node:fs/promises');
+await writeFile(path.join(root,'dist/version.json'),JSON.stringify({name:metadata.name,version:metadata.version})+'\n');
+await mkdir(path.join(root,'dist/source'),{recursive:true});
+const zip=path.join(root,'dist/source/SkyTuner-source.zip');
+await rm(zip,{force:true});
+execFileSync('zip',['-q','-r',zip,'.'],{cwd:staging});
+console.log(`Source download ready (${Math.round((await stat(zip)).size/1024)} KB).`);

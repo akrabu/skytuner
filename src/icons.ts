@@ -1,0 +1,25 @@
+const paths:Record<string,string>={
+  settings:'<path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/>',
+  share:'<path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>',
+  chart:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m5 6 5 6 7-7M8 19l4-7 8 3"/>',
+  close:'<path d="m6 6 12 12M18 6 6 18"/>',
+  pin:'<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.4"/>',
+  chevron:'<path d="m8 10 4 4 4-4"/>',
+  left:'<path d="m14 5-7 7 7 7M5 5v14"/>',
+  right:'<path d="m10 5 7 7-7 7M19 5v14"/>',
+  play:'<path d="m8 5 11 7-11 7Z" fill="currentColor" stroke="none"/>',
+  reverse:'<path d="m16 5-11 7 11 7Z" fill="currentColor" stroke="none"/>',
+  pause:'<path d="M8 5v14M16 5v14" stroke-width="3"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>',
+  download:'<path d="M12 3v12m-4-4 4 4 4-4M5 17v3h14v-3"/>',
+  copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>',
+  check:'<path d="m5 12 4 4L19 6"/>',
+  edit:'<path d="m15 4 5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 14Z"/>',
+  trash:'<path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/>',
+  moon:'<path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10Z"/>',
+  info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/>',
+  arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',
+  back:'<path d="M19 12H5m5-5-5 5 5 5"/>',
+};
+export function icon(name:string,cls=''){return `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${paths[name]??paths.info}</svg>`;}
+export const brandMark='<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="24" cy="24" rx="8" ry="22" transform="rotate(42 24 24)" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M24 18v12m-6-6h12" stroke="currentColor" stroke-width="1.2"/><circle cx="37" cy="14" r="2.6" fill="currentColor"/></svg>';
