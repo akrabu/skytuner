@@ -1,16 +1,17 @@
 {
   "name": "skytuner",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "type": "module",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "node scripts/check-version.mjs && node scripts/prepare-vendor.mjs && tsc --noEmit && vite build && node scripts/source.mjs",
+    "build": "node scripts/check-version.mjs && node scripts/prepare-vendor.mjs && node scripts/check-sharing.mjs && tsc --noEmit && vite build && node scripts/source.mjs",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "check": "tsc --noEmit",
     "verify:native": "node --experimental-strip-types scripts/verify-native.mjs",
-    "release": "node scripts/release.mjs"
+    "release": "node scripts/release.mjs",
+    "check:sharing": "node scripts/check-sharing.mjs"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.2.0",

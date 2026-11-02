@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.4 — 2026-11-02
+
+- Add a branded PNG shared-link image, concise Open Graph/Twitter metadata, canonical URL and PNG favicon for Messages and social previews.
+- Validate preview metadata and image dimensions during every build, and document public crawler checks for future releases.
+
 ## 0.0.3 — 2026-11-02
 
 - Add iPhone/Safari and Android/Chrome Home Screen installation instructions near the top of Settings, including current and older menu wording.

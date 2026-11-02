@@ -4,7 +4,7 @@ Yesterday’s transits. Tomorrow’s hits.
 
 [Open SkyTuner](https://skytuner.akrabu.app) · [Source](https://github.com/akrabu/skytuner) · [Changes](CHANGELOG.md)
 
-SkyTuner v0.0.3 · © 2026 [Mark Steven Smith, Jr.](https://www.markstevensmithjr.com)
+SkyTuner v0.0.4 · © 2026 [Mark Steven Smith, Jr.](https://www.markstevensmithjr.com)
 
 A single-screen tropical transit wheel with local natal charts, time scrubbing, forward/reverse playback, planet focus, shared moments, and PNG export. Birth data and planetary calculations remain in the browser. Location search uses Open-Meteo/GeoNames; manual coordinates and time zones work without the search service.
 
@@ -37,3 +37,9 @@ This project is AGPL-3.0-or-later. See LICENSE and THIRD-PARTY-NOTICES.md. The e
 Open Settings → Install SkyTuner for separate iPhone/Safari and Android/Chrome steps, with links to Apple and Google’s current instructions. A standalone manifest and bundled PNG icons support Home Screen installation. An internet connection is needed to open/reload the app and search cities; there is no offline service worker. If charts do not appear after installation, export them with Birth charts → Back up charts in the browser and Import backup in the installed app.
 
 The PNG app icons are rendered from `public/icons/icon.svg` (the existing favicon mark on an opaque background), using `rsvg-convert` at 180, 192 and 512 pixels. They are committed assets; building the app does not require an image renderer.
+
+## Shared-link previews
+
+The initial HTML includes canonical/Open Graph/Twitter metadata and a branded 1200×630PNG at `public/social/skytuner-card-v1.png`, plus raster icons. `npm run check:sharing` validates the metadata, canonical host, linked files and PNG dimensions; every build runs it. After publication, verify that the unauthenticated public HTML and image return successfully, including preview-crawler requests. Keep image filenames fresh when artwork changes. Existing Messages cards may remain cached by the receiving app. Preview metadata intentionally describes the app rather than any private natal chart.
+
+The social artwork SVG is editable source; its PNG and the 32px favicon can be regenerated with `rsvg-convert`. Builds use the committed PNGs and do not require that renderer. Apple guidance: https://developer.apple.com/documentation/technotes/tn3156-create-rich-previews-for-messages. Open Graph reference: https://ogp.me/.

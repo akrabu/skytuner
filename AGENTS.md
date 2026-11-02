@@ -14,3 +14,7 @@ Preserve the simple wheel and time controls, fitting desktop and mobile screens 
 - GitHub destination: public https://github.com/akrabu/skytuner. Do not publish hosting identity, credentials, saved charts, or local runtime state. Keep the full corresponding source and third-party notices.
 
 Host an existing Sites project through its supported source helper and native deployment tools. Preserve its project identity and public audience.
+
+## Shared-link presentation
+
+Keep the public canonical URL, concise Open Graph/Twitter titles and descriptions, raster social image, PNG favicon and Apple touch icon in the initial HTML. Never put private birth-chart data in preview metadata. Run `npm run check:sharing` (also part of the build), inspect changed artwork, and verify public HTML/image responses after deployment. Change the social image filename when its artwork changes so clients can request the new asset. Existing Messages cards may remain cached; do not promise to rewrite already-sent messages.
