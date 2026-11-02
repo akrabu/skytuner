@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.3 — 2026-11-02
+
+- Add iPhone/Safari and Android/Chrome Home Screen installation instructions near the top of Settings, including current and older menu wording.
+- Add a standalone web-app manifest, Android app icons and an Apple touch icon using the existing SkyTuner mark.
+- Explain the internet connection requirement and how to transfer saved birth charts into an installed app.
+
 ## 0.0.2 — 2026-11-02
 
 - Add linked author attribution and synchronized release versions.

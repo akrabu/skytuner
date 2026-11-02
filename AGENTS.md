@@ -7,7 +7,7 @@ Preserve the simple wheel and time controls, fitting desktop and mobile screens 
 - Increment the patch version for every newly published release unless Mark explicitly requests a minor or major bump.
 - Use `npm run release` for patch, `npm run release -- minor` or `npm run release -- major` only when requested.
 - A Site deployment and its matching GitHub source/tag are one logical release and use the same version. A retry of the same build retains its version.
-- The reviewed release currently in preparation is **0.0.2**, already advanced from the 0.0.1 prototype. Do not increment it again while completing this release.
+- Read the current version from package.json. Advance it once at the start of a new release; keep that version when retrying the same release.
 - Package metadata is the source of truth. Keep package-lock.json, the footer/About/image attribution, version.json, source download and GitHub release/tag consistent.
 - The copyright owner is Mark Steven Smith, Jr.; link the name to https://www.markstevensmithjr.com. Preserve the 2026 copyright year for this release.
 - Run `npm run check`, `npm test`, `npm run verify:native`, and `npm run build` before publication. Verify the browser layout and changed user flows. Do not claim unperformed checks.

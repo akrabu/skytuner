@@ -27,3 +27,9 @@ The source download and repository include application code, lockfile, fonts and
 - Controlled browser failure checks confirmed Worker-construction recovery, the 45-second unresponsive-worker timeout and recovery, corrupt-storage notices, and honest save-failure reporting. Simulation pages are excluded from production/source distribution.
 - A real 1800×2142 PNG with natal overlay was downloaded and visually inspected: fonts/glyphs, natal birthplace, date/time zone and release/copyright metadata render correctly.
 - GitHub Actions repeats checks, tests, native comparison and production build for main, release tags and pull requests. Browser checks apply to the connected Chromium environment; separate physical iOS/Android devices were not available for testing.
+
+## 0.0.3 installation follow-up
+
+Added expandable iPhone/Safari and Android/Chrome install instructions near the top of Settings, checked against Apple and Google’s official guides. Includes older browser menu labels, embedded-browser advice, chart backup transfer steps and the internet requirement. A standalone manifest and opaque PNG icons at 180/192/512pixels use the existing SkyTuner mark; the app still needs a connection when opened or reloaded and does not register an offline service worker.
+
+Browser checks at 305px,390px and1280px confirmed that the instructions expand with mouse/keyboard, remain within the dialog without horizontal overflow and leave existing Settings controls available. All 18tests and 444native reference values pass. The production build validates types and includes manifest/icons/source. Actual installation on physical iPhone/Android devices was not performed in this browser environment.
